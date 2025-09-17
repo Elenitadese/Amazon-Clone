@@ -5,6 +5,7 @@ import Landing from './Landing/Landing'
 import Payment from './Payment/Payment'
 import Order from './Order/Order'
 import Cart from './Cart/Cart'
+import Result from './Result/Result'
 
 const RauterPage = () => {
   return (
@@ -16,6 +17,8 @@ const RauterPage = () => {
           <Route path="/payments" element={<Payment />} />
           <Route path="/orders" element={<Order />} />
           <Route path="/cart" element={<Cart />} />
+
+          <Route path="/category/:categoryName" element={<Result />} />
         </Routes>
       </Router>
     </>
