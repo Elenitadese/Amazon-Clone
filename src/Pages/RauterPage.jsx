@@ -1,5 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+// for github deployment 
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from './Auth/Signup';
 import Landing from './Landing/Landing'
 import Payment from './Payment/Payment'
