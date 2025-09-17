@@ -5,6 +5,8 @@ import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 import LowerHeader from './LowerHeader';
 
+// to avoid re rendering(refreshing at each router we import link)
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,12 +14,12 @@ const Header = () => {
       <section>
         <div className="outer_div ">
           <div className="logo_container">
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="Amazon LOgo"
               />
-            </a>
+            </Link>
 
             {/* delivery */}
             <div className="delivery">
@@ -54,24 +56,24 @@ const Header = () => {
               </select>
             </a>
 
-            <a href="">
+            <Link to="/auth">
               <p>Sign In</p>
               <span>Account & lists</span>
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="/orders">
               <p>returns</p>
               <span>& orders</span>
-            </a>
+            </Link>
 
-            <a href="" className="cart">
+            <Link to="/cart" className="cart">
               <ShoppingCartTwoToneIcon size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-      <LowerHeader/>
+      <LowerHeader />
     </>
   );
 }
