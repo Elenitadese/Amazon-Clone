@@ -70,7 +70,10 @@ const ProductDetail = () => {
   return (
     <LayOut>
      
-        {Isloading ? <Loader /> : <ProductCard product={product} />}
+        {Isloading ? <Loader /> : <ProductCard product={product}
+        flex={true}
+        detailDescription={true}
+         />}
     
       {/* <ProductCard product={product} /> */}
     </LayOut>
